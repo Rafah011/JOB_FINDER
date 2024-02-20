@@ -1,0 +1,31 @@
+{
+  "name": "job_finder",
+  "version": "1.0.0",
+  "description": "Este e um sistema para programadores encontrarem vagas de trabalho",
+  "main": "app.js",
+  "scripts": {
+    "dev": "nodemon app.js"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/Rafah011/Job_Finder.git"
+  },
+  "author": "Rafael Oliveira",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/Rafah011/Job_Finder/issues"
+  },
+  "homepage": "https://github.com/Rafah011/Job_Finder#readme",
+  "dependencies": {
+    "body": "^5.1.0",
+    "body-parser": "^1.20.2",
+    "express": "^4.18.2",
+    "express-handlebars": "^7.1.2",
+    "parser": "^0.1.4",
+    "sequelize": "^6.37.1",
+    "sqlite3": "^5.1.7"
+  },
+  "devDependencies": {
+    "nodemon": "^3.0.3"
+  }
+}
