@@ -13,8 +13,11 @@ app.listen(PORT, () => {
 db
     .authenticate()
     .then(() => {
-        console.log('Conectou com o canco com sucesso');
+        console.log('Conectou com o banco com sucesso');
     })
+    .catch(err => {
+        console.log('Ocorreu um erro ao tentar se conectar', err);
+    });
 
 // Routes
 
