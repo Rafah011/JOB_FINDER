@@ -55,13 +55,12 @@
 
 /* form */
 
-#serach-form {
+#search-form {
     padding: 30px 100px;
 }
-#search-form .col-md-10, #search-form .col-md-2 {
+#search-form .col-md-10 #search-form .col-md-2 {
     padding: 0;
 }
-
 #search-form input, #search-form button {
     width: 100%;
     border-radius: 0;
@@ -116,4 +115,21 @@
     border: 1px solid transparent;
     border-radius: 0;
     color: #fff;
+}
+#main-title, #main-subtitle {
+    color: #fff;
+}
+.new-job-label {
+    color: #4d5154;
+    text-transform: uppercase;
+    font-weight: bold;
+    background-color: #ffd500;
+    position: absolute;
+    padding: 5px 10px;
+    right: 250px;
+    top: 40px;
+    display: none;
+}
+.new-job .new-job-label {
+    display: block;
 }
