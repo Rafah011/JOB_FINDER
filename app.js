@@ -6,23 +6,22 @@ const db = require('./db/connection');
 const bodyParser = require('body-parser');
 
 const PORT = 3000;
-
 app.listen(PORT, () => {
     console.log(`Esta funcionando na porta ${PORT}`);
 });
 
 // body parser
-
 app.use(bodyParser.urlencoded({ extended: false }));
 
 // handle bars
-
 app.set('views', path.join(__dirname, 'views'));
-app.engine('handlebars', exphbs({defaultLayout: 'main'}));
+app.engine('handlebars', exphbs.engine({defaultLayout: 'main'}));
 app.set('view engine', 'handlebars');
 
-// DB Connection
+// static folder
+app.use(express.static(path.join(__dirname, 'public')));
 
+// DB Connection
 db
     .authenticate()
     .then(() => {
@@ -33,9 +32,8 @@ db
     });
 
 // Routes
-
 app.get('/', (req, res) => {
-    res.send('Funcinando')
+    res.render('index');
 });
 
 // Jobs routes
