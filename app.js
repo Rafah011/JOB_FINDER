@@ -60,6 +60,8 @@ app.get('/', (req, res) => {
             res.render('index', {
                 jobs, search
             });
+            console.log(search);
+            console.log(search);
 
         })
         .catch(err => console.log(err));

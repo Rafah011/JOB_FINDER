@@ -1,7 +1,7 @@
 <div id="top-container" class="container-fluid">
     <h1 id="main-title" class="text-center">Encontre o emprego dos seus sonhos</h1>
     <p id="main-subtitle" class="text-center">Somos o site com mais vagas de tecnologia no mercado, direcionadas a vagas home office</p>
-    <form id="search-form" class="row" action="/" method="get">
+    <form id="search-form" class="row" action="/" method="GET">
         <div class="form-group col-sm-10">
             <input type="text" class="form-control" name="job" id="job" placeholder="Digite a vaga que está buscando">
         </div>
@@ -27,7 +27,7 @@
                         <h2>{{dataValues.title}}</h2>
                         <p>R${{dataValues.salary}}</p>
                         <span class="new-job-label">Nova</span>
-                        <a class="btn btn-primary">Ver vaga</a>
+                        <a class="btn btn-primary" href="/jobs/view/{{dataValues.id}}">Ver vaga</a>
                     </li>
                     {{/each}}
                 </ul>
