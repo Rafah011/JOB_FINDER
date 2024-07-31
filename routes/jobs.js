@@ -5,10 +5,10 @@ const Job = require('../models/Job');
 // Rota  de teste
 router.get('/test', (req, res) => {
     res.send('deu certo');
-})
+});
 
 // Detalhe da vaga
-router.get('/view/:id', (req, res) => Job.FindOne({
+router.get('/view/:id', (req, res) => Job.findOne({
     where: {id: req.params.id}
     }).then(job => {
         res.render('view', {

@@ -52,7 +52,6 @@ app.get('/', (req, res) => {
     } else {
         Job.findAll({
             where: {title: {[Op.like]: query}},
-           
             order: [
             ['createdAt', 'DESC']
         ]})
